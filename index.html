@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="description"
+    content="Filip figura tárháza, ahol a legmenőbb figurákat gyűjtöm össze!">
+
+    <meta name="keywords"
+    content="filip, figura, gyűjtemény, akciófigurák">
+
+    <meta name="author"
+    content="Ivády Barnabás">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Filip's Wishlist</title>
+
+</head>
+<body>
+<main>
+    <header>
+
+        <h1>Filip's Wishlist</h1>
+
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Kezdőlap</a>
+                </li>
+                <li>
+                    <a href="#figs">Figurák</a>
+                </li>
+                <li>
+                    <a href="#">Elérhetőség</a>
+                </li>
+                <li>
+                    <a href="#">Rólunk</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <article>
+        <div class="fejléc">
+            <h1>
+                Üdvözlünk a Filip's Wishlist oldalán!
+            </h1>
+            <h2>
+                Gyűjthető figurák és wishlist 👇
+            </h2>
+        </div>
+
+        <!-- SZŰRŐK -->
+
+        <div class="szurok">
+
+            <button class="aktiv"
+            onclick="szures('osszes', event)">
+                Összesen
+            </button>
+
+            <button
+            onclick="szures('megvan', event)">
+                Megvan
+            </button>
+
+            <button
+            onclick="szures('nincs', event)">
+                Nincs meg
+            </button>
+
+        </div>
+
+        <!-- KÁRTYÁK -->
+
+        <div id="figs" class="kartyak">
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=deku'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+                    ❌ Nincs meg
+                </div>
+                <div class="date">
+                    2026: Szeptember
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/carnagedeku.webp"
+                    alt="Deku">
+                    <img class="masodik"
+                    src="kepek/carnagedeku2.webp"
+                    alt="Deku alternate">
+
+                </div>
+                <p class="series">
+                    Bandai Namco
+                </p>
+                <h3>
+                    My Hero Academia S.H.Figuarts Deku Overlay
+                </h3>
+                <p class="ar">
+                    37.990 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="megvan"
+            onclick="window.location.href='figura.html?id=preypredator'">
+                <div class="status megvan"
+                onclick="valtStatus(event, this)">
+                    ✔ Megvan
+                </div>
+                <div class="date">
+                    2026: Május
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/prey.webp"
+                    alt="Predator">
+                    <img class="masodik"
+                    src="kepek/prey2.webp"
+                    alt="Predator alternate">
+
+                </div>
+                <p class="series">
+                    NECA
+                </p>
+                <h3>
+                    Prey Ultimate Feral Predator Figure
+                </h3>
+                <p class="ar">
+                    19.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=ghostface'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: November
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/ultimateghostface.webp"
+                    alt="Ghostface">
+                    <img class="masodik"
+                    src="kepek/ultimateghostface2.webp"
+                    alt="Ghostface alternate">
+
+                </div>
+                <p class="series">
+                    NECA
+                </p>
+                <h3>
+                    Ghost Face Returns Ultimate Ghost Face
+                </h3>
+                <p class="ar">
+                    17.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=ghostrider'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: Szeptember
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/ghostrider.webp"
+                    alt="Ghost Rider">
+
+                    <img class="masodik"
+                    src="kepek/ghostrider2.webp"
+                    alt="Ghost Rider alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Ghost Rider
+                </h3>
+                <p class="ar">
+                    12.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=ladypool'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: Szeptember
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/ladypool.webp"
+                    alt="Lady Pool">
+
+                    <img class="masodik"
+                    src="kepek/ladypool2.webp"
+                    alt="Lady Pool alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Lady Pool
+                </h3>
+                <p class="ar">
+                    12.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=carnage'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    Raktáron
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/carnage.webp"
+                    alt="Carnage">
+
+                    <img class="masodik"
+                    src="kepek/carnage2.webp"
+                    alt="Carnage alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Carnage
+                </h3>
+                <p class="ar">
+                    13.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=moonknight'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: Szeptember
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/MK.webp"
+                    alt="Moon Knight">
+
+                    <img class="masodik"
+                    src="kepek/MK2.webp"
+                    alt="Moon Knight alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Moon Knight (Marvel Rivals)
+                </h3>
+                <p class="ar">
+                    16.990 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=spidernoir'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: ???
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/spidernoir.webp"
+                    alt="Spider-Noir">
+
+                    <img class="masodik"
+                    src="kepek/spidernoir2.webp"
+                    alt="Spider-Noir alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Spider-Noir
+                </h3>
+                <p class="ar">
+                    16.990 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=spidervenom'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    Raktáron
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/spidervenom.webp"
+                    alt="Spider-Venom">
+
+                    <img class="masodik"
+                    src="kepek/spidervenom2.webp"
+                    alt="Spider-Venom alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Spider-Man Spider-Venom
+                </h3>
+                <p class="ar">
+                    12.990 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="megvan"
+            onclick="window.location.href='figura.html?id=nightcrawler'">
+                <div class="status megvan"
+                onclick="valtStatus(event, this)">
+                    ✔ Megvan
+                </div>
+                <div class="date">
+                    Raktáron
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/nightcrawler.webp"
+                    alt="Nightcrawler">
+
+                    <img class="masodik"
+                    src="kepek/nightcrawler2.webp"
+                    alt="Nightcrawler alternate">
+
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Marvel Legends Series Spider-Man Uncanny Spider-Man Nightcrawler
+                </h3>
+                <p class="ar">
+                    12.990 Ft
+                </p>
+            </div>
+            
+            <div class="kartya"
+            data-status="megvan"
+            onclick="window.location.href='figura.html?id=classicspawn'">
+                <div class="status megvan"
+                onclick="valtStatus(event, this)">
+                    ✔ Megvan
+                </div>
+                <div class="date">
+                    Raktáron
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/classicspawn.webp"
+                    alt="Spawn">
+                    <img class="masodik"
+                    src="kepek/classicspawn2.webp"
+                    alt="Spawn alternate">
+                </div>
+                <p class="series">
+                    McFarlane Toys
+                </p>
+                <h3>
+                    Spawn McFarlane Elite Edition
+                </h3>
+                <p class="ar">
+                    22.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=spawn'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: Július
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/redemptionspawn.webp"
+                    alt="Spawn">
+                    <img class="masodik"
+                    src="kepek/redemptionspawn2.webp"
+                    alt="Spawn alternate">
+                </div>
+                <p class="series">
+                    McFarlane Toys
+                </p>
+                <h3>
+                    Spawn Wings Of Redemption
+                </h3>
+                <p class="ar">
+                    13.990 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=soundwaveone'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2026: November
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/soundwaveone.webp"
+                    alt="Soundwave">
+                    <img class="masodik"
+                    src="kepek/soundwaveone2.webp"
+                    alt="Soundwave alternate">
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Transformers: One - Transformers Studio Series Soundwve
+                </h3>
+                <p class="ar">
+                    12.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="nincs"
+            onclick="window.location.href='figura.html?id=bumblebee4'">
+                <div class="status nincs"
+                onclick="valtStatus(event, this)">
+
+                    ❌ Nincs meg
+
+                </div>
+                <div class="date">
+                    2027: Január
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/bumblebee4.webp"
+                    alt="Bumblebee">
+                    <img class="masodik"
+                    src="kepek/bumblebee42.webp"
+                    alt="Bumblebee alternate">
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Transformers: Age Of Extinction - Transformers Studio Series Bumblebee
+                </h3>
+                <p class="ar">
+                    12.490 Ft
+                </p>
+            </div>
+
+            <div class="kartya"
+            data-status="megvan"
+            onclick="window.location.href='figura.html?id=ksi'">
+                <div class="status megvan"
+                onclick="valtStatus(event, this)">
+
+                    ✔ Megvan
+
+                </div>
+                <div class="date">
+                    Raktáron
+                </div>
+                <div class="kep">
+                    <img class="elso"
+                    src="kepek/ksiconcept.webp"
+                    alt="ksiconcept">
+                    <img class="masodik"
+                    src="kepek/ksiconcept2.webp"
+                    alt="ksiconcept alternate">
+                </div>
+                <p class="series">
+                    Hasbro
+                </p>
+                <h3>
+                    Transformers: Age of Extinction Studio Series Concept Art KSI Widow
+                </h3>
+                <p class="ar">
+                    12.990 Ft
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>
+            © 2026 Filip's Wishlist
+        </p>
+    </footer>
+
+</main>
+
+<script>
+
+/* ===== BETÖLTÉS ===== */
+
+window.onload = function(){
+
+    const kartyak =
+    document.querySelectorAll(".kartya");
+
+    kartyak.forEach((kartya, index) => {
+
+        const mentettStatus =
+        localStorage.getItem("kartya_" + index);
+
+        const statusElem =
+        kartya.querySelector(".status");
+
+        if(mentettStatus === "megvan"){
+
+            kartya.dataset.status = "megvan";
+
+            statusElem.classList.remove("nincs");
+
+            statusElem.classList.add("megvan");
+
+            statusElem.innerHTML = "✔ Megvan";
+
+        }
+
+        else{
+
+            kartya.dataset.status = "nincs";
+
+            statusElem.classList.remove("megvan");
+
+            statusElem.classList.add("nincs");
+
+            statusElem.innerHTML = "❌ Nincs meg";
+
+        }
+
+    });
+
+};
+
+/* ===== SZŰRÉS ===== */
+
+function szures(kategoria, event){
+
+    const kartyak =
+    document.querySelectorAll(".kartya");
+
+    const gombok =
+    document.querySelectorAll(".szurok button");
+
+    gombok.forEach(gomb => {
+
+        gomb.classList.remove("aktiv");
+
+    });
+
+    event.target.classList.add("aktiv");
+
+    kartyak.forEach(kartya => {
+
+        if(kategoria === "osszes"){
+
+            kartya.style.display = "block";
+
+        }
+
+        else if(
+        kartya.dataset.status === kategoria){
+
+            kartya.style.display = "block";
+
+        }
+
+        else{
+
+            kartya.style.display = "none";
+
+        }
+
+    });
+
+}
+
+/* ===== STÁTUSZ VÁLTÁS ===== */
+
+function valtStatus(event, elem){
+
+    event.stopPropagation();
+
+    const kartya =
+    elem.parentElement;
+
+    const kartyak =
+    document.querySelectorAll(".kartya");
+
+    const index =
+    Array.from(kartyak).indexOf(kartya);
+
+    if(elem.classList.contains("nincs")){
+
+        elem.classList.remove("nincs");
+
+        elem.classList.add("megvan");
+
+        elem.innerHTML = "✔ Megvan";
+
+        kartya.dataset.status = "megvan";
+
+        localStorage.setItem(
+        "kartya_" + index,
+        "megvan");
+
+    }
+
+    else{
+
+        elem.classList.remove("megvan");
+
+        elem.classList.add("nincs");
+
+        elem.innerHTML = "❌ Nincs meg";
+
+        kartya.dataset.status = "nincs";
+
+        localStorage.setItem(
+        "kartya_" + index,
+        "nincs");
+
+    }
+
+}
+
+</script>
+</body>
+</html>

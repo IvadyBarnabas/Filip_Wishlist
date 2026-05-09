@@ -1,0 +1,561 @@
+/* ===== ALAP ===== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #08111f,
+    #10213d,
+    #13294b);
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+/* ===== LAYOUT ===== */
+
+main{
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    grid-template-areas:
+    "header header"
+    "aside article"
+    "footer footer";
+}
+
+/* ===== HEADER ===== */
+
+header{
+
+    grid-area: header;
+
+    height: 320px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.8)),
+
+    url("kepek/banner.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-bottom: 3px solid #42a5ff;
+}
+
+header h1{
+
+    font-size: 4rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    text-shadow: 0 0 20px #42a5ff;
+}
+
+/* ===== ASIDE ===== */
+
+aside{
+
+    grid-area: aside;
+
+    background: rgba(5,10,20,0.9);
+
+    padding: 30px;
+
+    min-height: 100vh;
+
+    border-right:
+    2px solid rgba(66,165,255,0.2);
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 15px;
+}
+
+nav a{
+
+    display: block;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+
+    background: #2f7edb;
+
+    transform: translateX(5px);
+
+    box-shadow:
+    0 0 15px rgba(66,165,255,0.5);
+}
+
+/* ===== ARTICLE ===== */
+
+article{
+
+    grid-area: article;
+
+    padding: 40px;
+}
+
+/* ===== FEJLÉC ===== */
+
+.fejléc h1{
+
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+
+    color: #7cc4ff;
+}
+
+.fejléc h2{
+
+    font-weight: normal;
+
+    color: #d6e8ff;
+}
+
+/* ===== SZŰRŐK ===== */
+
+.szurok{
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 35px 0;
+
+    flex-wrap: wrap;
+}
+
+.szurok button{
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    border:
+    1px solid rgba(66,165,255,0.3);
+}
+
+.szurok button:hover{
+
+    background: #2f7edb;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 0 15px rgba(66,165,255,0.5);
+}
+
+.szurok .aktiv{
+
+    background:
+    linear-gradient(
+    90deg,
+    #2f7edb,
+    #42a5ff);
+
+    box-shadow:
+    0 0 20px rgba(66,165,255,0.6);
+}
+
+/* ===== KÁRTYÁK ===== */
+
+.kartyak{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 30px;
+}
+
+.kartya{
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    border:
+    1px solid rgba(66,165,255,0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+.kartya:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 0 30px rgba(66,165,255,0.45);
+}
+
+/* ===== STÁTUSZ ===== */
+
+.status{
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    z-index: 5;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.status:hover{
+
+    transform: scale(1.08);
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,0.3);
+}
+
+.megvan{
+
+    background: #18b95b;
+}
+
+.nincs{
+
+    background: #d62839;
+}
+
+/* ===== DÁTUM ===== */
+
+.date{
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    z-index: 5;
+
+    background: rgba(0,0,0,0.7);
+
+    padding: 8px 12px;
+
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+}
+
+/* ===== KÉPEK ===== */
+
+.kep{
+
+    position: relative;
+
+    height: 340px;
+
+    overflow: hidden;
+}
+
+.kep img{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 0.5s;
+}
+
+.masodik{
+    opacity: 0;
+}
+
+.kep:hover .masodik{
+    opacity: 1;
+}
+
+.kep:hover .elso{
+    opacity: 0;
+}
+
+/* ===== SZÖVEGEK ===== */
+
+.series{
+
+    padding:
+    20px 20px 5px;
+
+    color: #7cc4ff;
+
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+}
+
+.kartya h3{
+
+    padding: 0 20px;
+
+    min-height: 70px;
+
+    margin-bottom: 15px;
+}
+
+.ar{
+
+    padding:
+    0 20px 25px;
+
+    color: #59b7ff;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+    grid-area: footer;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: #07111d;
+
+    border-top:
+    2px solid rgba(66,165,255,0.2);
+}
+
+/* ===== FIGURA ADATLAP ===== */
+
+.adatlap{
+
+    display: grid;
+
+    grid-template-columns: 500px 1fr;
+
+    gap: 50px;
+
+    padding: 50px;
+}
+
+.adatlap-kep img{
+
+    width: 100%;
+
+    border-radius: 25px;
+
+    box-shadow:
+    0 0 30px rgba(66,165,255,0.4);
+}
+
+.adatlap-info h1{
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+    color: #7cc4ff;
+}
+
+.gyarto{
+
+    color: #6fb9ff;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 20px;
+}
+
+.adatok{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.leiras{
+
+    margin-top: 35px;
+}
+
+.leiras p{
+
+    margin-top: 10px;
+
+    line-height: 1.8;
+}
+
+.boltok{
+
+    margin-top: 40px;
+}
+
+.boltok a{
+
+    display: inline-block;
+
+    margin-right: 15px;
+
+    margin-top: 10px;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+    linear-gradient(
+    90deg,
+    #2f7edb,
+    #42a5ff);
+
+    transition: 0.3s;
+}
+
+.boltok a:hover{
+
+    transform: scale(1.05);
+
+    box-shadow:
+    0 0 20px rgba(66,165,255,0.5);
+}
+
+/* ===== RESZPONZÍV ===== */
+
+@media(max-width: 900px){
+
+    main{
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+        "header"
+        "aside"
+        "article"
+        "footer";
+    }
+
+    aside{
+
+        min-height: auto;
+    }
+
+    nav ul{
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    header h1{
+
+        font-size: 2.5rem;
+
+        text-align: center;
+    }
+
+    article{
+
+        padding: 20px;
+    }
+
+    .adatlap{
+
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+    }
+
+    .adatlap-info h1{
+
+        font-size: 2rem;
+    }
+}
